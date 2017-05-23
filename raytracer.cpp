@@ -77,7 +77,7 @@ int main (int argc, char *argv[]) {
 	Colour tile_floor (1, 1, 1, 4);
 	Colour gray (0.5, 0.5, 0.5, 0);
 	Colour black (0.0, 0.0, 0.0, 0);
-    Colour clear (0.5, 0.5, 0.5, 2.5);
+   	Colour clear (0.5, 0.5, 0.5, 2.5);
 
 	//Setup light sources
 	//The vector for a light positon
@@ -93,27 +93,27 @@ int main (int argc, char *argv[]) {
 	Sphere scene_sphere (O, 1, pretty_green);
 	Vect sphere2_location (1.75, -0.25, 0);
 	Sphere scene_sphere2 (sphere2_location, 0.5, clear);
-    Vect sphere3_location (3,-0.25,0);
-    Sphere scene_sphere3 (sphere3_location,0.4,full_blue);
+    	Vect sphere3_location (3,-0.25,0);
+    	Sphere scene_sphere3 (sphere3_location,0.4,full_blue);
 	Vect sphere4_location (2,0,5);
 	Sphere scene_sphere4 (sphere4_location,1.0,full_red);
-    Vect sphere5_location (5,2,5);
-    Sphere scene_sphere5 (sphere5_location,1.7,clear);
+    	Vect sphere5_location (5,2,5);
+    	Sphere scene_sphere5 (sphere5_location,1.7,clear);
 
 
 	Plane scene_plane (Y, -1, tile_floor);
-    Plane scene_plane2 (Z, 10, black);
+    	Plane scene_plane2 (Z, 10, black);
 	//Use the vector to hold all scene objects
 	vector<Object*> scene_objects;
 	//Push the objects to the vector
 	scene_objects.push_back(dynamic_cast<Object*>(&scene_sphere));
 	scene_objects.push_back(dynamic_cast<Object*>(&scene_sphere2));
-    scene_objects.push_back(dynamic_cast<Object*>(&scene_sphere3));
-    scene_objects.push_back(dynamic_cast<Object*>(&scene_sphere4));
-    scene_objects.push_back(dynamic_cast<Object*>(&scene_sphere5));
+    	scene_objects.push_back(dynamic_cast<Object*>(&scene_sphere3));
+    	scene_objects.push_back(dynamic_cast<Object*>(&scene_sphere4));
+    	scene_objects.push_back(dynamic_cast<Object*>(&scene_sphere5));
 
 	scene_objects.push_back(dynamic_cast<Object*>(&scene_plane));
-    scene_objects.push_back(dynamic_cast<Object*>(&scene_plane2));
+    	scene_objects.push_back(dynamic_cast<Object*>(&scene_plane2));
 
 	//Used to track anti-aliasing and the current pixel
 	int thisone, aa_index;
